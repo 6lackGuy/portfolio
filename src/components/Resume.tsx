@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
@@ -100,7 +100,7 @@ const SkillList = styled.ul`
   }
 `;
 
-const Resume = () => {
+const Resume: FC = () => {
   return (
     <ResumeSection id="resume">
       <ResumeTitle>Resume</ResumeTitle>

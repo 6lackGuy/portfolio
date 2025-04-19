@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from '@emotion/styled';
 import { FaPhone, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 
@@ -60,7 +60,7 @@ const ContactValue = styled.a`
   }
 `;
 
-const Contact = () => {
+const Contact: FC = () => {
   return (
     <ContactSection id="contact">
       <ContactTitle>Contact</ContactTitle>

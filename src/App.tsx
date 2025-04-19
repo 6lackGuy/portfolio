@@ -1,20 +1,17 @@
-import { motion } from 'framer-motion';
 import styled from '@emotion/styled';
 import { FaArrowRight } from 'react-icons/fa';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
-import { FaMoon, FaSun } from 'react-icons/fa';
-import Sparkle from './components/Sparkle';
+import { ThemeProvider } from './context/ThemeContext';
+import About from './components/About';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import About from './components/About';
+import Sparkle from './components/Sparkle';
 
-const Container = styled.div`
+const Container = styled.div<{ theme: any }>`
   width: 100%;
   min-height: 100vh;
-  background: #0A0A0A;
-  color: #FFFFFF;
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.text};
+  transition: background-color 0.3s ease, color 0.3s ease;
 `;
 
 const ContentWrapper = styled.div`
@@ -23,12 +20,13 @@ const ContentWrapper = styled.div`
   padding: 2rem;
 `;
 
-const Nav = styled.nav`
+const Nav = styled.nav<{ theme: any }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  background: ${props => props.theme.navBg};
 `;
 
 const NavLinks = styled.div`
@@ -37,13 +35,13 @@ const NavLinks = styled.div`
   align-items: center;
 
   a {
-    color: #FFFFFF;
+    color: inherit;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #FFA500;
+      color: ${props => props.theme.primary};
     }
   }
 `;
@@ -285,7 +283,11 @@ Let's build something awesome together! <span className="emoji">🚀</span><span
 };
 
 function App() {
-  return <AppContent />;
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
 }
 
 export default App;

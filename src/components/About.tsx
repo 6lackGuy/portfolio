@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { FC } from 'react';
 
 const AboutSection = styled.section`
   margin-top: 6rem;
@@ -52,7 +53,7 @@ const StatLabel = styled.p`
   font-size: 1rem;
 `;
 
-const About = () => {
+const About: FC = () => {
   return (
     <AboutSection id="about">
       <AboutTitle>About Me</AboutTitle>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
@@ -10,7 +10,7 @@ const SparkleIcon = styled(motion.div)`
   opacity: 0.6;
 `;
 
-const SparkleComponent = () => {
+const Sparkle: FC = () => {
   return (
     <>
       <SparkleIcon
@@ -49,4 +49,4 @@ const SparkleComponent = () => {
   );
 };
 
-export default SparkleComponent; 
+export default Sparkle;
