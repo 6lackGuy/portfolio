@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import { FaArrowRight } from 'react-icons/fa';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import About from './components/About';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Sparkle from './components/Sparkle';
+import { lightTheme } from './styles/theme';
 
 const Container = styled.div<{ theme: any }>`
   width: 100%;
@@ -41,7 +42,7 @@ const NavLinks = styled.div`
     transition: color 0.3s ease;
 
     &:hover {
-      color: ${props => props.theme.primary};
+      color: ${(props: { theme: typeof lightTheme }) => props.theme.primary};
     }
   }
 `;
@@ -171,10 +172,10 @@ const ProjectTags = styled.div`
 
 const AppContent = () => {
   return (
-    <Container>
-      <Nav>
+    <Container theme={useTheme().theme}>
+      <Nav theme={useTheme().theme}>
         <Logo href="#">Home</Logo>
-        <NavLinks>
+        <NavLinks theme={useTheme().theme}>
           <a href="#about">About</a>
           <a href="#resume">Resume</a>
           <a href="#work">Work</a>

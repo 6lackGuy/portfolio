@@ -85,7 +85,7 @@ const Contact: FC = () => {
           <FaLinkedin />
           <ContactInfo>
             <ContactLabel>LinkedIn</ContactLabel>
-            <ContactValue href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <ContactValue href="https://www.linkedin.com/in/calebadjuya/" target="_blank" rel="noopener noreferrer">
               View Profile
             </ContactValue>
           </ContactInfo>
