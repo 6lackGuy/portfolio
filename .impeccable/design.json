@@ -93,7 +93,7 @@
       "kind": "custom",
       "refersTo": "dimension",
       "description": "Measured value between extension lines, value knocked out on the sheet.",
-      "html": "<div class=\"ds-dim-wrap\"><div class=\"ds-dim\"><span>1 h</span></div></div>",
+      "html": "<div class=\"ds-dim-wrap\"><div class=\"ds-dim\"><span>0 h</span></div></div>",
       "css": ".ds-dim-wrap { position: relative; height: 48px; background: #1b1e23; padding: 0 16px; } .ds-dim { position: absolute; left: 16px; right: 16px; top: 50%; border-top: 1px solid #8e98a4; } .ds-dim::before, .ds-dim::after { content: ''; position: absolute; top: -12px; height: 24px; border-left: 1px solid #8e98a4; } .ds-dim::before { left: 0; } .ds-dim::after { right: 0; } .ds-dim span { position: absolute; left: 50%; top: -11px; translate: -50% 0; background: #1b1e23; padding: 0 8px; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.8rem; color: #ff6a13; line-height: 22px; font-variant-numeric: tabular-nums; }"
     },
     {

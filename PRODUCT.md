@@ -31,7 +31,7 @@ Visitors come from LinkedIn (linkedin.com/in/calebadjuya), GitHub (github.com/6l
 
 ## Evidence on Hand
 From the Sep 2026 CV:
-- MAX (Metro Africa Xpress), Lead Mobile Engineer, Oct 2023 to present (intern Apr to Oct 2023): 3 production Flutter apps for thousands of agents in Nigeria, Ghana, Cameroon; +50% operational efficiency; onboarding platform for 3,000+ champion registrations per month, +30% onboarding success; downtime cut from 3h to 1h (~66%); driver-readiness assessment app with randomized tests and multi-language support; Youverify KYC and Smartlook integrations; owns Play Store releases.
+- MAX (Metro Africa Xpress), Lead Mobile Engineer, Oct 2023 to present (intern Apr to Oct 2023): 3 production Flutter apps for thousands of agents in Nigeria, Ghana, Cameroon; +50% operational efficiency; onboarding platform for 3,000+ champion registrations per month, +30% onboarding success; downtime cut from 3h to zero (user-confirmed Nov 2026; the Sep 2026 CV PDF still says 3h to 1h); driver-readiness assessment app with randomized tests and multi-language support; Youverify KYC and Smartlook integrations; owns Play Store releases.
 - VoxeCore (Ontario, remote), Head of Engineering (contract), Jan 2026 to present: Python reasoning engine streaming LLM logic tokens to the frontend; React/TypeScript design-system refactor; Cloud Run + Celery microservices; migration to cost-efficient LLMs.
 - Busha, Senior Mobile Engineer (contract), Aug to Nov 2025: crypto-trading features, design system, mobile CI/CD.
 - Ardels, freelance, Jul to Nov 2024: domestic-worker verification app, FCM, A/B tests.

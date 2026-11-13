@@ -766,7 +766,7 @@ main > .sheet {
 }
 .dimension {
   position: absolute;
-  left: 33.333%;
+  left: 0;
   right: 0;
   top: 50%;
   height: 0;

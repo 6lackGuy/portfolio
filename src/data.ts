@@ -131,7 +131,7 @@ export const revisions: {
     changes: [
       'Shipped and maintain 3 production Flutter apps serving thousands of agents across Nigeria, Ghana and Cameroon, driving a 50% increase in operational efficiency.',
       'Built and deployed an onboarding platform supporting 3,000+ champion registrations per month, raising onboarding success by 30%.',
-      'Cut app downtime from 3 hours to 1 hour (~66%) by hunting down frontend and backend defects before they spread.',
+      'Cut app downtime from 3 hours to zero by hunting down frontend and backend defects before they spread.',
       'Integrated Youverify KYC against Nigerian government databases, and Smartlook session replays and heatmaps to surface bugs.',
       'Own the Google Play release process and upgraded legacy code to the latest Flutter SDK.',
     ],

@@ -5,13 +5,13 @@ import { DownloadIcon, ExternalIcon, RevTriangle } from './icons';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-// The "after" bar is machined down from 3 h to 1 h as the drawing scrolls into view.
+// The "after" bar is machined away from 3 h to zero as the drawing scrolls into view.
 function DowntimeDrawing() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.9', 'center 0.5'] });
-  const width = useTransform(scrollYProgress, [0, 1], reduce ? ['33.333%', '33.333%'] : ['100%', '33.333%']);
-  const hours = useTransform(scrollYProgress, (v) => `${reduce ? 1 : Math.round(3 - 2 * v)} h`);
+  const width = useTransform(scrollYProgress, [0, 1], reduce ? ['0%', '0%'] : ['100%', '0%']);
+  const hours = useTransform(scrollYProgress, (v) => `${reduce ? 0 : Math.round(3 - 3 * v)} h`);
   const dimOpacity = useTransform(scrollYProgress, [0.75, 1], reduce ? [1, 1] : [0, 1]);
 
   return (
@@ -29,7 +29,7 @@ function DowntimeDrawing() {
         <div className="bar-track">
           <motion.div className="bar bar-after" style={{ width }} />
           <motion.div className="dimension" style={{ opacity: dimOpacity }}>
-            <span>−66%</span>
+            <span>−100%</span>
           </motion.div>
         </div>
         <motion.span className="dim">{hours}</motion.span>
