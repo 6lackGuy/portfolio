@@ -73,7 +73,7 @@ export function Revisions() {
     <>
       <div className="sheet-head">
         <h2 id="revisions-title">Revision history</h2>
-        <p className="sheet-intro">Newest revision on top. Two of them are still open.</p>
+        <p className="sheet-intro">Current role on top, then newest first.</p>
       </div>
       <div className="rev-head" aria-hidden="true">
         <span>Rev</span>

@@ -84,12 +84,26 @@ export const revisions: {
   changes: string[];
 }[] = [
   {
+    rev: 'B',
+    period: 'Oct 2023 – Present',
+    role: 'Lead Mobile Engineer',
+    company: 'Metro Africa Xpress (MAX)',
+    place: 'Lagos, Nigeria · started as Flutter Developer Intern, Apr – Oct 2023',
+    current: true,
+    changes: [
+      'Shipped and maintain 3 production Flutter apps serving thousands of agents across Nigeria, Ghana and Cameroon, driving a 50% increase in operational efficiency.',
+      'Built and deployed an onboarding platform supporting 3,000+ champion registrations per month, raising onboarding success by 30%.',
+      'Cut app downtime from 3 hours to zero by hunting down frontend and backend defects before they spread.',
+      'Integrated Youverify KYC against Nigerian government databases, and Smartlook session replays and heatmaps to surface bugs.',
+      'Own the Google Play release process and upgraded legacy code to the latest Flutter SDK.',
+    ],
+  },
+  {
     rev: 'E',
     period: 'Jan 2026 – Present',
     role: 'Head of Engineering (Contract)',
     company: 'VoxeCore',
     place: 'Ontario, Canada · Remote',
-    current: true,
     changes: [
       'Architected a Python reasoning engine that streams LLM logic tokens to the frontend, so users watch the model’s decision-making in real time.',
       'Led the refactor of the React/TypeScript client onto a centralized design system, unifying UI across themes and cutting technical debt.',
@@ -119,21 +133,6 @@ export const revisions: {
       'Built and shipped the Ardels app end-to-end so companies can register domestic workers and verify their credentials.',
       'Implemented secure authentication, verification flows and real-time notifications via Firebase Cloud Messaging.',
       'Optimized retrieval for a searchable repository of verified worker profiles; ran A/B tests to iterate on UX.',
-    ],
-  },
-  {
-    rev: 'B',
-    period: 'Oct 2023 – Present',
-    role: 'Lead Mobile Engineer',
-    company: 'Metro Africa Xpress (MAX)',
-    place: 'Lagos, Nigeria · started as Flutter Developer Intern, Apr – Oct 2023',
-    current: true,
-    changes: [
-      'Shipped and maintain 3 production Flutter apps serving thousands of agents across Nigeria, Ghana and Cameroon, driving a 50% increase in operational efficiency.',
-      'Built and deployed an onboarding platform supporting 3,000+ champion registrations per month, raising onboarding success by 30%.',
-      'Cut app downtime from 3 hours to zero by hunting down frontend and backend defects before they spread.',
-      'Integrated Youverify KYC against Nigerian government databases, and Smartlook session replays and heatmaps to surface bugs.',
-      'Own the Google Play release process and upgraded legacy code to the latest Flutter SDK.',
     ],
   },
   {
