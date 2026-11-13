@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T00:00:00Z",
+  "title": "Design System: Caleb Adjuya Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "safety-orange": { "role": "primary", "displayName": "Safety Orange", "canonical": "#ff6a13", "tonalRamp": ["#3d1600", "#6b2800", "#9a3a02", "#cc4e08", "#ff6a13", "#ff8c4a", "#ffb385", "#ffdcc4"] },
+      "drafting-desk": { "role": "neutral", "displayName": "Drafting Desk", "canonical": "#121417", "tonalRamp": ["#0b0c0e", "#121417", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "graphite-sheet": { "role": "neutral", "displayName": "Graphite Sheet", "canonical": "#1b1e23", "tonalRamp": ["#0b0c0e", "#121417", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "vellum-line": { "role": "neutral", "displayName": "Vellum Line", "canonical": "#c9d1da", "tonalRamp": ["#0b0c0e", "#121417", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "vellum-line-mid": { "role": "neutral", "displayName": "Vellum Line, Mid", "canonical": "#8e98a4", "tonalRamp": ["#0b0c0e", "#121417", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "vellum-line-faint": { "role": "neutral", "displayName": "Vellum Line, Faint", "canonical": "#3f4650", "tonalRamp": ["#0b0c0e", "#121417", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "lettering-white": { "role": "neutral", "displayName": "Lettering White", "canonical": "#ffffff", "tonalRamp": ["#1b1e23", "#3f4650", "#8e98a4", "#c9d1da", "#e3e8ed", "#eef1f4", "#f7f8fa", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#14161a", "tonalRamp": ["#0b0c0e", "#14161a", "#1b1e23", "#272b31", "#3f4650", "#8e98a4", "#c9d1da", "#eef1f4"] },
+      "sheet-grid": { "role": "neutral", "displayName": "Sheet Grid", "canonical": "rgba(201, 209, 218, 0.045)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name on sheet 1 only." },
+      "headline": { "displayName": "Sheet Title", "purpose": "One title per sheet." },
+      "title": { "displayName": "Assembly Title", "purpose": "App names, revision roles, panel heads." },
+      "body": { "displayName": "Body", "purpose": "Running text, 44-72ch." },
+      "label": { "displayName": "Annotation Lettering (--annot)", "purpose": "Captions, readouts, units note, contact field names, colophon, scroll hint." },
+      "data": { "displayName": "Field Data", "purpose": "Title-block fields, table heads, tags, zone markers." },
+      "dimension": { "displayName": "Dimension", "purpose": "Dimension values, dates, balloon and note numerals, measured values." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Exponential ease-out for every state transition (0.2s) and entrance (0.9-1.6s)." },
+      { "name": "hero-explode", "value": "scroll-scrubbed translateZ, layer gap g0 to g1 over first 70% of a 240vh track; rotateX 56 to 61deg, rotateZ -42 to -34deg; 1.6s intro ease-apart on load", "purpose": "Signature: the hero assembly explodes into five layers; callouts re-projected to 2D every frame." },
+      { "name": "isometric-to-elevation", "value": "scroll-scrubbed rotateX 58 to 0deg, rotateZ +/-40 to 0deg, y 80 to 0px, perspective 1400px; callouts and dimension fade in over the last 18%", "purpose": "App drawings settle from isometric into a front elevation before annotation." },
+      { "name": "sheet-exit-tilt", "value": "scroll-scrubbed rotateX 0 to 16deg, scale 1 to 0.88, opacity 1 to 0.2, perspective 1600px, origin bottom centre", "purpose": "Each sheet leans back and recedes as it leaves." },
+      { "name": "revision-swing", "value": "rotateX -70 to 0deg, 0.9s on ease, once in view", "purpose": "Revision rows swing down into place." },
+      { "name": "reduced-motion", "value": "MotionConfig reducedMotion=user; every scroll transform resolves to its final value; smooth scroll off", "purpose": "Everything static and readable under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "nav-compact", "value": "1080px" },
+      { "name": "single-column", "value": "860px" },
+      { "name": "nav-hidden", "value": "560px" },
+      { "name": "phone", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Download CV only; solid safety orange plate.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M8 2v9M4 7.5 8 11.5l4-4M2.5 14h11\" stroke-linecap=\"square\"/></svg> Download CV</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 24px; border: 1.5px solid; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: 0.9rem; font-weight: 750; font-stretch: 115%; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; cursor: pointer; transition: background-color 0.2s cubic-bezier(0.16,1,0.3,1), color 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1), transform 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid #ff6a13; outline-offset: 3px; } .ds-btn-primary { background: #ff6a13; border-color: #ff6a13; color: #14161a; } .ds-btn-primary:hover { background: #ffffff; border-color: #ffffff; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action (email); outline plate.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Email me</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; background: transparent; border: 1.5px solid #8e98a4; color: #ffffff; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: 0.9rem; font-weight: 750; font-stretch: 115%; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { border-color: #ff6a13; color: #ff6a13; } .ds-btn-ghost:focus-visible { outline: 2px solid #ff6a13; outline-offset: 3px; }"
+    },
+    {
+      "name": "Sheet Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixed desk bar with numbered sheet links and the CV button.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">C. Adjuya</a><ol><li><a href=\"#\"><span class=\"ds-nav-no\">2</span>Notes</a></li><li><a href=\"#\"><span class=\"ds-nav-no\">3</span>Apps</a></li></ol><span class=\"ds-nav-progress\"></span></header>",
+      "css": ".ds-nav { position: relative; display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 28px; background: rgba(18,20,23,0.94); border-bottom: 1px solid #3f4650; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; } .ds-nav-mark { font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; font-size: 0.95rem; color: #ffffff; text-decoration: none; } .ds-nav ol { display: flex; gap: 4px; margin: 0 0 0 auto; padding: 0; list-style: none; } .ds-nav ol a { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; font-size: 0.8rem; font-weight: 600; font-stretch: 110%; text-transform: uppercase; letter-spacing: 0.06em; color: #c9d1da; text-decoration: none; transition: color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-nav-no { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid #3f4650; border-radius: 50%; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.65rem; color: #8e98a4; } .ds-nav ol a:hover, .ds-nav ol a:hover .ds-nav-no { color: #ff6a13; border-color: #ff6a13; } .ds-nav ol a:focus-visible { outline: 2px solid #ff6a13; outline-offset: 3px; } .ds-nav-progress { position: absolute; left: 0; right: 40%; bottom: -1px; height: 2px; background: #ff6a13; }"
+    },
+    {
+      "name": "Current Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Marks the current state only.",
+      "html": "<span class=\"ds-tag\">Current</span>",
+      "css": ".ds-tag { display: inline-block; border: 1px solid #ff6a13; color: #ff6a13; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 8px; }"
+    },
+    {
+      "name": "Title Block",
+      "kind": "card",
+      "refersTo": "title-block",
+      "description": "Per-sheet drawing identity, pinned bottom right of every sheet.",
+      "html": "<dl class=\"ds-tb\"><div><dt>Drawing</dt><dd>General assembly</dd></div><div><dt>Sheet</dt><dd>1 / 6</dd></div><div><dt>Rev</dt><dd>2026.11</dd></div><div><dt>Scale</dt><dd>1:1</dd></div></dl>",
+      "css": ".ds-tb { display: inline-grid; grid-template-columns: minmax(200px, auto) repeat(3, auto); margin: 0; background: #1b1e23; border-top: 1px solid #8e98a4; border-left: 1px solid #8e98a4; } .ds-tb > div { padding: 7px 14px 8px; } .ds-tb > div + div { border-left: 1px solid #3f4650; } .ds-tb dt { font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: #8e98a4; } .ds-tb dd { margin: 0; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: 0.8rem; font-weight: 700; font-stretch: 112%; text-transform: uppercase; letter-spacing: 0.04em; color: #c9d1da; white-space: nowrap; }"
+    },
+    {
+      "name": "Callout (leader, balloon, label)",
+      "kind": "custom",
+      "refersTo": "balloon",
+      "description": "Annotation attached to a drawn part.",
+      "html": "<div class=\"ds-callout\"><span class=\"ds-leader\"></span><span class=\"ds-balloon\">1</span><span class=\"ds-callout-text\"><b>Interface</b><small>Flutter · Material 3</small></span></div>",
+      "css": ".ds-callout { display: flex; align-items: center; gap: 10px; white-space: nowrap; background: #1b1e23; padding: 16px; } .ds-leader { position: relative; width: 44px; height: 1.5px; background: #ff6a13; } .ds-leader::before { content: ''; position: absolute; left: -3px; top: -2.25px; width: 6px; height: 6px; border-radius: 50%; background: #ff6a13; } .ds-balloon { display: inline-grid; place-items: center; width: 26px; height: 26px; border: 1.5px solid #ff6a13; border-radius: 50%; background: #1b1e23; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.7rem; color: #ff6a13; } .ds-callout-text { background: #1b1e23; padding: 2px 8px 3px; } .ds-callout-text b { display: block; font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif; font-size: 0.82rem; font-weight: 760; font-stretch: 115%; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; line-height: 1.2; } .ds-callout-text small { display: block; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.66rem; color: #8e98a4; }"
+    },
+    {
+      "name": "Dimension Line",
+      "kind": "custom",
+      "refersTo": "dimension",
+      "description": "Measured value between extension lines, value knocked out on the sheet.",
+      "html": "<div class=\"ds-dim-wrap\"><div class=\"ds-dim\"><span>1 h</span></div></div>",
+      "css": ".ds-dim-wrap { position: relative; height: 48px; background: #1b1e23; padding: 0 16px; } .ds-dim { position: absolute; left: 16px; right: 16px; top: 50%; border-top: 1px solid #8e98a4; } .ds-dim::before, .ds-dim::after { content: ''; position: absolute; top: -12px; height: 24px; border-left: 1px solid #8e98a4; } .ds-dim::before { left: 0; } .ds-dim::after { right: 0; } .ds-dim span { position: absolute; left: 50%; top: -11px; translate: -50% 0; background: #1b1e23; padding: 0 8px; font-family: 'B612 Mono', ui-monospace, monospace; font-size: 0.8rem; color: #ff6a13; line-height: 22px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Revision Mark",
+      "kind": "custom",
+      "refersTo": "revision",
+      "description": "Open triangle with revision letter; orange when current.",
+      "html": "<svg class=\"ds-rev\" width=\"34\" height=\"30\" viewBox=\"0 0 34 30\" aria-hidden=\"true\"><path d=\"M17 2 32 28H2Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"/><text x=\"17\" y=\"23\" text-anchor=\"middle\">E</text></svg>",
+      "css": ".ds-rev { color: #ff6a13; } .ds-rev text { font-family: 'B612 Mono', ui-monospace, monospace; font-size: 11px; fill: currentColor; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Drawing Set",
+    "overview": "Every page is a sheet in an engineering drawing set: a graphite sheet laid on a darker desk, framed twice, lettered along its edges with zone numbers (1 to 8) and zone letters (A to F), and closed by a title block that states the drawing name, sheet number of the set, revision, scale and projection. Content is not placed in cards; it is drawn. Work is shown as assemblies with balloons and leader lines, experience as a revision table, skills as a bill of materials, contact as an approval block.\n\nThe linework is flat and precise. Vellum-grey lines in three weights do all the structural work, white is reserved for lettering that must be read first, and safety orange marks only what a drafter would mark in red: leaders, dimensions, balloons, the current revision, and the primary action. Depth exists only as real projection (isometric views, explodes, sheets tilting away), never as decoration.\n\nMotion is the drawing being operated: the hero assembly explodes along its stack as the visitor scrolls, app drawings rotate from isometric into a front elevation and only then gain their callouts, and each sheet leans back and recedes as it leaves, like turning to the next sheet. All of it is scroll-scrubbed with an exponential ease-out, and all of it resolves to a static, fully readable drawing under reduced motion.",
+    "keyCharacteristics": [
+      "Graphite sheet on a darker desk, with a 32px drafting grid at near-invisible strength.",
+      "Double frame, zone markers and a per-sheet title block on every section.",
+      "Square corners everywhere; circles only for balloons, leader terminators and sheet numbers.",
+      "Expanded uppercase Archivo for all lettering; B612 Mono only for numbers, dates and table field data.",
+      "One accent, safety orange, carrying drafting meaning rather than decoration.",
+      "Scroll-scrubbed 3D projection that collapses to a static drawing under reduced motion."
+    ],
+    "rules": [
+      { "name": "The Red Pencil Rule", "body": "Safety orange marks drafting meaning (a leader, a dimension, a balloon, a revision, the current state) or the one primary action. If an orange element could be removed without losing a measurement, a reference or the CV/email action, it should not be orange.", "section": "colors" },
+      { "name": "The White Lettering Rule", "body": "Pure white is for lettering a visitor must read first (names, headings, callout titles, values) and for the drawn device outline. Running text stays in Vellum Line.", "section": "colors" },
+      { "name": "The Mono Means Measured Rule", "body": "B612 Mono appears only on numbers, dates, units and table or field metadata. Prose, headings, buttons and callout titles are always Archivo.", "section": "typography" },
+      { "name": "The One Annotation Hand Rule", "body": "Every caption-level note uses the `--annot` lettering token. A new note style is a new token, not a local font declaration.", "section": "typography" },
+      { "name": "The Projection, Not Shadow Rule", "body": "If something needs to read as in front, move it in z or draw it with a heavier or brighter line. Do not add a shadow, glow or blur.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** give every new section a sheet: frame, zone markers, and a title block with its own drawing name and sheet number.",
+      "**Do** letter in expanded uppercase Archivo (width 110-125%) and keep numbers, dates and field names in B612 Mono with tabular figures.",
+      "**Do** use the `--annot` token for every caption, readout and field note.",
+      "**Do** connect any annotation to its subject with an orange leader and balloon, and knock text out on Graphite Sheet where lines pass behind it.",
+      "**Do** express layers and materials with hatching and dashed outlines.",
+      "**Do** drive motion from scroll with the exponential ease-out (cubic-bezier(0.16, 1, 0.3, 1)), and make every motion value resolve to its final, readable state when reduced motion is requested."
+    ],
+    "donts": [
+      "**Don't** use orange for decoration, large backgrounds or secondary actions; the approval block and primary button are the only orange fills.",
+      "**Don't** add drop shadows, glows, glass blur or smooth colour gradients; linear gradients are allowed only to draw grid lines and hatching.",
+      "**Don't** round UI corners; reserve curves for balloons, terminators and drawn devices.",
+      "**Don't** set prose, headings or buttons in mono.",
+      "**Don't** put white on running text or let the faint line carry text.",
+      "**Don't** use content cards or a bento grid; place content as drawings, tables and notes on the sheet."
+    ]
+  }
+}

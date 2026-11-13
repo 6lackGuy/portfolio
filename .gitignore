@@ -59,3 +59,6 @@ logs
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Impeccable review captures (large, regenerable)
+.impeccable/review/

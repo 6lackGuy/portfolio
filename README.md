@@ -1,65 +1,22 @@
-# Modern Portfolio Website
+# Caleb Adjuya · Portfolio
 
-A modern, animated portfolio website built with React, TypeScript, and Framer Motion.
+A drawing set for a mobile engineer: each sheet is a section, and the hero app explodes into its layers in 3D as you scroll.
 
-## Features
+Built with React, TypeScript, Vite and Framer Motion. Fonts are self-hosted via Fontsource (Archivo, B612 Mono).
 
-- Smooth animations and transitions
-- Responsive design
-- Modern UI/UX
-- Easy to customize
-- Project showcase with images
-- Experience timeline
-- Contact section
+## Editing content
 
-## Customization
+All copy and facts live in `src/data.ts` (taken from the CV). The downloadable CV is `public/Caleb-Adjuya-CV.pdf`; replace that file to update it.
 
-### 1. Personal Information
-Update the following in `src/App.tsx`:
-- Your name in the navigation
-- Your profile image path
-- Your professional title and description
+## Run
 
-### 2. Projects
-Update the projects array in `src/components/Projects.tsx`:
-- Add your project images
-- Update project descriptions
-- Add GitHub and demo links
-- Update technologies used
-
-### 3. Experience
-The experience section is already populated with your work history. You can modify it in `src/components/Experience.tsx` if needed.
-
-### 4. Images
-Add your images to the `src/assets` directory and update the image paths in:
-- Profile image in `App.tsx`
-- Project images in `Projects.tsx`
-
-## Getting Started
-
-1. Install dependencies:
 ```bash
 npm install
-```
-
-2. Start the development server:
-```bash
 npm run dev
 ```
 
-3. Build for production:
 ```bash
 npm run build
 ```
 
-## Technologies Used
-
-- React
-- TypeScript
-- Framer Motion
-- Emotion (styled-components)
-- Vite
-
-## License
-
-MIT
+Motion respects `prefers-reduced-motion`: the 3D and scroll effects fall back to a static layout.
